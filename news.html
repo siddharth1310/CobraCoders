@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/logo.png" class="rounded" width="40" height="40" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Languages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/python.html">Python</a>
+                        <a class="dropdown-item" href="/java.html">Java</a>
+                        <a class="dropdown-item" href="/C++.html">C ++</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/news.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#contactModal" data-whatever="@mdo"
+                        href="#">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-outline-success ml-2" data-toggle="modal"
+                    data-target="#SignInModal" data-whatever="@mdo">Sign In</button>
+                <button type="button" class="btn btn-outline-success ml-2" data-toggle="modal"
+                    data-target="#exampleModal" data-whatever="@mdo">Register</button>
+            </form>
+        </div>
+    </nav>
+
+    <!--modal Sign In-->
+    <div class="modal fade" id="SignInModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">User ID:</label>
+                            <input type="text" class="form-control" id="recipient-name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" required="required">
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal Register-->
+    <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">First Name :</label>
+                            <input type="text" class="form-control" id="recipient-name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Last Name :</label>
+                            <input type="text" class="form-control" id="password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email ID :</label>
+                            <input type="email" class="form-control" id="email" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileno" class="col-form-label">Mobile Number :</label>
+                            <input type="text" class="form-control" id="mobileno" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password1" class="col-form-label">Password :</label>
+                            <input type="password" class="form-control" id="password1" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2" class="col-form-label">Confirm Password :</label>
+                            <input type="password" class="form-control" id="password2" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Address :</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required="required">
+                            <label class="form-check-label" for="exampleCheck1">I Agree To All Terms &
+                                Conditions.</label>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal Contact us-->
+    <div class="modal fade" id="contactModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" required="required"
+                                placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" required="required"
+                                placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mobileno" required="required"
+                                placeholder="Your Contact Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" required="required"
+                                placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="date" required="required"
+                                placeholder="Today's Date">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" name="message" required="required"
+                                rows="6"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--card-deck-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container bg-white">
+            <br>
+            <h1 style="text-align: center;">!!! Latest Headlines !!!</h1>
+            <hr>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#page1"><b>Page 1</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#page2"><b>Page 2</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#page3"><b>page 3</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#page4"><b>Page 4</b></a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="page1">
+                    <br>
+                    <img src="/news1.jfif" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <hr>
+                    <div class="container" style="text-align: justify;">
+                        <h1>Apple introduces Swift Numerics to support numerical computing in Swift</h1>
+                        <br>
+
+                        <p>Yesterday, Steve Canon, a member of Apple’s Swift Standard Library team announced a new
+                            open-source project called Swift Numerics. The goal behind this project is to enable the use
+                            of Swift language in new domains of programming.
+                            <br><br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class=" col-lg-4 ">
+                                <br>
+                                <img class='rounded' src="/news1sub.jfif">
+                                <br>
+                                <br>
+                                <img class='rounded' src="/news1sub2.jfif">
+                                <br>
+                            </div>
+                            <div class="col-lg-8" style="text-align: justify;">
+                                <h4><b>What is Swift Numerics</b></h4>
+                                Swift Numerics is a Swift package containing a set of fine-grained modules. These
+                                modules fall broadly under two categories. One, modules that are too specialized to be
+                                included into the standard library, but are general enough to be in a single common
+                                package. The second category includes those modules that are “under active development
+                                toward possible future inclusion in the standard library.”
+                                <br>
+                                <br>
+                                Currently, Swift Numerics has two most-requested modules: Real and Complex. The Real
+                                module provides basic math functions proposed in SE-0246. This proposal was accepted but
+                                due to some limitations in the compiler, it is not yet possible to add the new functions
+                                directly to the standard library. Real provides the basic math functionalities in a
+                                separate module so that developers can start using them right away in their projects.
+                                <br>
+                                <br>
+                                The Complex module introduces a Complex number type over an underlying Real type. It
+                                includes usual arithmetic operators for complex numbers. It is conformant to usual
+                                protocols such as Equatable, Hashable, Codable, and Numeric. The support for complex
+                                numbers can be especially useful when working with Fourier transforms and signal
+                                processing algorithms.
+                                <br>
+                                <br>
+                                The modules included in Swift Numerics have minimal dependencies. For instance, the
+                                current modules only require the availability of the Swift and C standard libraries and
+                                the runtime support provided by compiler-rt. Also, the Swift Numerics package is
+                                open-sourced under the same license and contribution guidelines as the Swift project
+                                (Apache License 2.0).
+                                <br><br>
+                                In a discussion on Hacker News, many developers shared their views on Swift Numerics. A
+                                user commented, “Really looking forward to ShapedArray. Eventually, a lot of what one
+                                might do with Python may be available in Swift.”
+
+                                Read the official announcement by Apple to know more about Swift Numerics. Also, check
+                                out its GitHub repository.
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <p style="text-align: left;"><b>By Bhagyashree R -November 8, 2019 - 8:42 am</b></p>
+                    <br>
+                </div>
+                <div class="tab-pane container fade" id="page2">
+                    <br>
+                    <img src="/news2.jfif" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <hr>
+                    <div class="container" style="text-align: justify;">
+                        <h1>Facebook mandates Visual Studio Code as default development environment and partners with
+                            Microsoft for remote development extensions</h1>
+                        <br>
+
+                        <p>On Tuesday, Facebook mandates Visual Studio Code, the source code editor developed by
+                            Microsoft,
+                            as their default development environment. Additionally, they also stated that the company
+                            will
+                            work with Microsoft to expand the remote development extension for Visual Studio Code so
+                            that
+                            engineers can do large-scale remote development.
+                            <br><br>
+                            As per the official announcement page, Facebook engineers have written millions of lines of
+                            codes and there is no mandated development environment. Till now Facebook developers used
+                            Vim or
+                            Emacs and the development environment was disjointed. And certain developers also used
+                            Nuclide,
+                            an integrated development environment developed by Facebook.
+                            <br><br>
+                            But in late 2018, they announced to their internal engineers that they would move Nuclide to
+                            Visual Studio Code. They have also done plenty of development work to migrate the current
+                            Nuclide functionality, along with new features to Visual Studio Code and currently it is
+                            used
+                            extensively across the company in beta.
+                            <br>
+                        </p>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8" style="text-align: justify;">
+                                <h4><b>Why Visual Studio Code?</b></h4>
+                                The Visual Studio Code is a very popular development tool, with great support from
+                                Microsoft
+                                and
+                                the
+                                open source community. It runs on macOS, Windows, and Linux, and has a robust and
+                                well-defined
+                                extension API that enables to continue building the important capabilities required for
+                                the
+                                large-scale development done at Facebook. The company believes that it is a platform on
+                                which
+                                they
+                                can safely bet their development platform future.
+                                <br>
+                                <br>
+                                They have also partnered with Microsoft for remote development. At present, Facebook
+                                engineers
+                                install Visual Studio Code on a local PC, but the actual development is done directly on
+                                the
+                                development server in the data center. Therefore, it aims to improve efficiency and
+                                productivity
+                                by
+                                making the code on the server accessible in a seamless and high-performance manner.
+                                <br>
+                                <br>
+                                Facebook mandates Visual Studio Code as an integrated development environment which can
+                                be
+                                used internally, specifically, because Facebook uses various programming languages. It
+                                also
+                                uses Mercurial as the source control infrastructure, it will work on the development of
+                                extensions to allow direct source control operations within Visual Studio Code.
+                                <br>
+                                <br>
+                                Facebook states, “VS Code is now an established part of Facebook’s development future.
+                                In
+                                teaming
+                                with Microsoft, we’re looking forward to being part of the community that helps Visual
+                                Studio
+                                Code
+                                continue to be a world class development tool.”
+                                <br><br>
+                                On Hacker News, developers are discussing various issues related to remote development
+                                extensions in
+                                VS Code, one of them is it is not open-source and Facebook should take efforts to make
+                                it an
+                                open
+                                project.
+                            </div>
+                            <div class=" col-lg-4 ">
+                                <br>
+                                <img class='rounded' src="/news2sub1.jfif">
+                                <br>
+                                <br>
+                                <img class='rounded' src="/news2sub2.jfif">
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <p style="text-align: right;"><b>By Fatema Patrawala -November 21, 2019 - 6:36 am</b></p>
+                    <br>
+                </div>
+                <div class="tab-pane container fade" id="page3">
+                    <br>
+                    <img src="/news3.jfif" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <hr>
+                    <div class="container" style="text-align: justify;">
+                        <h1>Python 3.9 alpha 1 is now ready for testing</h1>
+                        <br>
+
+                        <p>Three days ago, the team behind Python announced the release of Python 3.9.0a1, which is the
+                            first out of the six planned alpha releases of Python 3.9. The final stable version of
+                            Python 3.9 is slated to release in May 2020. An alpha release indicates that developers can
+                            start testing the new features and check for bug fixes but are not recommended to use it in
+                            production.
+                            <br><br>
+                            Last month, the previous stable version, Python 3.8 was released with features like walrus
+                            operator, positional-only parameters support for Vectorcall.
+                        </p>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class=" col-lg-4 ">
+                                <br>
+                                <br>
+                                <img class='rounded' src="/news3sub.jfif">
+                                <br>
+                            </div>
+                            <div class="col-lg-8" style="text-align: justify;">
+                                <h4><b>Some improvements introduced in Python 3.9.0a1</b></h4>
+                                The __import__() function which is invoked by the import statement will now raise
+                                ImportError instead of ValueError. In the previous versions, the latter used to occur
+                                when a relative import went past its top-level package.
+                                <br>
+                                <br>
+                                Starting from Python 3.9.0a1, the absolute path of the script filename will be specified
+                                on the command line: the __file__ attribute of the __main__ module. The sys.argv[0] and
+                                sys.path[0] will become an absolute path rather than a relative path. Also, the
+                                traceback will now display the absolute path for __main__ module frames in this case.
+                                The encoding and errors arguments in the debug build and development mode will now be
+                                checked in the string encoding and decoding operations.
+                                <br>
+                                <br>
+                                ast: It is added in the indent option to dump() and produces a multi-line indented
+                                output.
+                                asyncio: It can now use coroutine which is a generalized form of subroutines.
+                                Subroutines enter and exit at only two different points, while coroutines can be
+                                entered, exited, and resumed at many points. Moreover, asyncio.run() is updated to use
+                                the new coroutine.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <p style="text-align: left;"><b>By Vincy Davis -November 22, 2019 - 8:27 am</b></p>
+                    <br>
+                </div>
+                <div class="tab-pane container fade" id="page4">
+                    <br>
+                    <img src="/news4.jfif" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <hr>
+                    <div class="container" style="text-align: justify;">
+                        <h1>Azure Functions 3.0 released with support for .NET Core 3.1!</h1>
+                        <br>
+
+                        <p>On 9th December, Microsoft announced that the go-live release of the Azure Functions 3.0 is
+                            now available. Among many new capabilities and functionality added to this release, one
+                            amazing addition is the support for the newly released .NET Core 3.1 — an LTS (long-term
+                            support) release — and Node 12.
+                            <br><br>
+                            With users having the advantage to build and deploy 3.0 functions in production, the Azure
+                            Functions 3.0 bring newer capabilities including the ability to target .NET Core 3.1 and
+                            Node 12, higher backward compatibility for existing apps running on older language versions,
+                            without any code changes.
+                        </p>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8" style="text-align: justify;">
+                                “While the runtime is now ready for production, and most of the tooling and performance
+                                optimizations are rolling out soon, there are still some tooling improvements to come
+                                before we announce Functions 3.0 as the default for new apps. We plan to announce
+                                Functions 3.0 as the default version for new apps in January 2020,” the official
+                                announcement mentions.
+                                <br>
+                                <br>
+                                While users running on earlier versions of Azure Functions will continue to be
+                                supported, the company does not plan to deprecate 1.0 or 2.0 at present. “Customers
+                                running Azure Functions targeting 1.0 or 2.0 will also continue to receive security
+                                updates and patches moving forward—to both the Azure Functions runtime and the
+                                underlying .NET runtime—for apps running in Azure. Whenever there’s a major version
+                                deprecation, we plan to provide notice at least a year in advance for users to migrate
+                                their apps to a newer version,” Microsoft mentions.
+                            </div>
+                            <div class=" col-lg-4 ">
+                                <img class='rounded' src="/news4sub.jfif">
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <p style="text-align: right;"><b>By Vincy Davis -November 22, 2019 - 8:27 am</b></p>
+                    <br>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--footer-->
+    <div class="container-fluid text-white bg-dark">
+        <div class="text-center center-block">
+            <hr>
+            <a href="https://www.facebook.com/bootsnipp"><i id="social-fb"
+                    class="fa fa-facebook-square fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://twitter.com/siddharthwolve5"><i id="social-tw"
+                    class="fa fa-twitter-square fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp"
+                    class="fa fa-google-plus-square fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://www.instagram.com/siddharthwolverine"><i id="social-in"
+                    class="fa fa-instagram fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="mailto:siddharthwolverine@gmail.com"><i id="social-em"
+                    class="fa fa-envelope-square fa-3x social"></i></a>
+            <br>
+
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: siddharthwolverine@gmail.com | All Rights
+            Reserved.
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>

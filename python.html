@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Python</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/logo.png" class="rounded" width="40" height="40" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Languages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/python.html">Python</a>
+                        <a class="dropdown-item" href="/java.html">Java</a>
+                        <a class="dropdown-item" href="/C++.html">C ++</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/news.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#contactModal" data-whatever="@mdo"
+                        href="#">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-outline-success ml-2" data-toggle="modal"
+                    data-target="#SignInModal" data-whatever="@mdo">Sign In</button>
+                <button type="button" class="btn btn-outline-success ml-2" data-toggle="modal"
+                    data-target="#exampleModal" data-whatever="@mdo">Register</button>
+            </form>
+        </div>
+    </nav>
+    <!--modal Sign In-->
+    <div class="modal fade" id="SignInModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">User ID:</label>
+                            <input type="text" class="form-control" id="recipient-name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" required="required">
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal Register-->
+    <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">First Name :</label>
+                            <input type="text" class="form-control" id="recipient-name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Last Name :</label>
+                            <input type="text" class="form-control" id="password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email ID :</label>
+                            <input type="email" class="form-control" id="email" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileno" class="col-form-label">Mobile Number :</label>
+                            <input type="text" class="form-control" id="mobileno" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password1" class="col-form-label">Password :</label>
+                            <input type="password" class="form-control" id="password1" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2" class="col-form-label">Confirm Password :</label>
+                            <input type="password" class="form-control" id="password2" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Address :</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required="required">
+                            <label class="form-check-label" for="exampleCheck1">I Agree To All Terms &
+                                Conditions.</label>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal Contact us-->
+    <div class="modal fade" id="contactModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" required="required"
+                                placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" required="required"
+                                placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mobileno" required="required"
+                                placeholder="Your Contact Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" required="required"
+                                placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="date" required="required"
+                                placeholder="Today's Date">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" name="message" required="required"
+                                rows="6"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--card-deck-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-2">Python</h1>
+            <hr>
+            <p class="lead" style="text-align: justify;">Python is an interpreted, high-level, general-purpose
+                programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy
+                emphasizes code readability with its notable use of significant whitespace. Its language constructs and
+                object-oriented approach aim to help programmers write clear, logical code for small and large-scale
+                projects.
+                <br>
+                <br>
+                Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including
+                structured (particularly, procedural), object-oriented, and functional programming. Python is often
+                described as a "batteries included" language due to its comprehensive standard library.
+                <br>
+                <br>
+                Python was conceived in the late 1980s as a successor to the ABC language. Python 2.0, released in 2000,
+                introduced features like list comprehensions and a garbage collection system with reference counting.
+                <br>
+                <br>
+                Python 3.0, released in 2008, was a major revision of the language that is not completely
+                backward-compatible, and much Python 2 code does not run unmodified on Python 3.The Python 2 language
+                was officially discontinued in 2020 (first planned for 2015), and "Python 2.7.18
+                is the last Python 2.7 release and therefore the last Python 2 release."
+            </p>
+            <h6 class="display-4">History</h6>
+            <br>
+            <p class="lead" style="text-align: justify;">
+                Python was conceived in the late 1980s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI)
+                in the Netherlands as a successor to the ABC language (itself inspired by SETL),capable of
+                exception handling and interfacing with the Amoeba operating system.Its implementation began in
+                December 1989.Van Rossum shouldered sole responsibility for the project, as the lead developer,
+                until 12 July 2018, when he announced his "permanent vacation" from his responsibilities as Python's
+                Benevolent Dictator For Life, a title the Python community bestowed upon him to reflect his long-term
+                commitment as the project's chief decision-maker.He now shares his leadership as a member of a
+                five-person steering council.
+                <br><br></p>
+            <div class="row">
+                <div class="col col-lg-8 lead" style="text-align: justify;">
+                    In January 2019, active Python core developers elected Brett Cannon, Nick Coghlan, Barry Warsaw,
+                    Carol Willing and Van Rossum to a five-member "Steering Council" to
+                    lead the project.Python 2.0 was released on 16 October 2000 with many major new features, including
+                    a cycle-detecting
+                    garbage collector and support for Unicode.Python 3.0 was released on 3 December 2008. It was a major
+                    revision of the language that is not
+                    completely backward-compatible.Many of its major features were backported to Python 2.6. and
+                    2.7.x version series.
+                    <br><br>
+                    Releases of Python 3 include the 2 to 3 utility, which automates (at least partially) the
+                    translation of Python 2 code to Python 3.Python 2.7's end-of-life date was initially set at 2015
+                    then postponed to 2020 out of concern that a
+                    large body of existing code could not easily be forward-ported to Python 3.
+                </div>
+                <div class="col col-lg-4">
+                    <img src="/python1.jfif" class="rounded">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h6 class="display-4">Features and philosophy</h6>
+            <br>
+            <div class="row">
+                <div class="col col-lg-4">
+                    <img src="/python2.jfif" class="rounded">
+                </div>
+                <div class="col col-lg-8 lead" style="text-align: end">
+                    In January 2019, active Python core developers elected Brett Cannon, Nick Coghlan, Barry Warsaw,
+                    Carol Willing and Van Rossum to a five-member "Steering Council" to
+                    lead the project.Python 2.0 was released on 16 October 2000 with many major new features, including
+                    a cycle-detecting
+                    garbage collector and support for Unicode.Python 3.0 was released on 3 December 2008. It was a major
+                    revision of the language that is not
+                    completely backward-compatible.Many of its major features were backported to Python 2.6. and
+                    2.7.x version series.
+                    <br><br>
+                    Releases of Python 3 include the 2 to 3 utility, which automates (at least partially) the
+                    translation of Python 2 code to Python 3.Python 2.7's end-of-life date was initially set at 2015
+                    then postponed to 2020 out of concern that a
+                    large body of existing code could not easily be forward-ported to Python 3.
+                </div>
+                <div class="col col-lg-12 lead" style="text-align: jusitfy">
+                    <br>
+                    Rather than having all of its functionality built into its core, Python was designed to be highly
+                    extensible. This compact modularity has made it particularly popular as a means of adding
+                    programmable interfaces to existing applications. Van Rossum's vision of a small core language with
+                    a large standard library and easily extensible interpreter stemmed from his frustrations with ABC,
+                    which espoused the opposite approach.Python strives for a simpler, less-cluttered syntax and grammar
+                    while giving developers a choice in their coding methodology.
+                    <br>
+                    <br>
+                    In contrast to Perl's "there is more than one way to do it" motto, Python embraces a "there should
+                    be one—and preferably only one—obvious way to do it" design philosophy.
+                    Alex Martelli, a Fellow at the Python Software Foundation and Python book author, writes that "To
+                    describe something as 'clever' is not considered a compliment in the Python culture."Python's
+                    developers strive to avoid premature optimization, and reject patches to non-critical parts
+                    of the CPython reference implementation that would offer marginal increases in speed at the cost of
+                    clarity.
+                    <br>
+                    <br>
+                    When speed is important, a Python programmer can move time-critical functions to extension modules
+                    written in languages such as C, or use PyPy, a just-in-time compiler. Cython is
+                    also available, which translates a Python script into C and makes direct C-level API calls into the
+                    Python interpreter.An important goal of Python's developers is keeping it fun to use. This is
+                    reflected in the language's name—a tribute to the British comedy group Monty Python—and in
+                    occasionally playful
+                    approaches to tutorials and reference materials, such as examples that refer to spam and eggs (from
+                    a famous Monty Python sketch) instead of the standard foo and bar.
+                    <br>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h6 class="display-4">Syntax and semantics</h6>
+            <br>
+            <div class="row">
+                <div class="col col-lg-8 lead" style="text-align: justify">
+                    Python is meant to be an easily readable language. Its formatting is visually uncluttered, and it
+                    often uses English keywords where other languages use punctuation. Unlike many other languages, it
+                    does not use curly brackets to delimit blocks, and semicolons after statements are optional. It has
+                    fewer syntactic exceptions and special cases than C or Pascal.
+                    Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks. An
+                    increase in indentation comes after certain statements; a decrease in indentation signifies the end
+                    of the current block.Thus, the program's visual structure accurately represents the program's
+                    semantic structure.This feature is sometimes termed the off-side rule, which some other
+                    languages share, but in most languages indentation doesn't have any semantic meaning.Despite being
+                    dynamically typed, Python is strongly typed, forbidding operations that are not well-defined (for
+                    example, adding a number to a string) rather than silently attempting to make sense of them.
+                </div>
+                <div class="col col-lg-4">
+                    <img src="/python3.jfif" class="rounded">
+                </div>
+                <div class="col col-lg-12 lead" style="text-align: jusitfy">
+                    <br>
+                    Python allows programmers to define their own types using classes, which are most often used for
+                    object-oriented programming. New instances of classes are constructed by calling the class (for
+                    example, SpamClass() or EggsClass()), and the classes are instances of the metaclass type (itself an
+                    instance of itself), allowing metaprogramming and reflection.
+                    <br>
+                    <br>
+                    Before version 3.0, Python had two kinds of classes: old-style and new-style.The syntax of both
+                    styles is the same, the difference being whether the class object is inherited from, directly or
+                    indirectly (all new-style classes inherit from object and are instances of type). In versions of
+                    Python 2 from Python 2.2 onwards, both kinds of classes can be used. Old-style classes were
+                    eliminated in Python 3.0.
+                    The long term plan is to support gradual typing and from Python 3.5, the syntax of the language
+                    allows specifying static types but they are not checked in the default implementation, CPython. An
+                    experimental optional static type checker named mypy supports compile-time type checking.
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="container-fluid text-white bg-dark">
+        <div class="text-center center-block">
+            <hr>
+            <a href="https://www.facebook.com/bootsnipp"><i id="social-fb"
+                    class="fa fa-facebook-square fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://twitter.com/siddharthwolve5"><i id="social-tw"
+                    class="fa fa-twitter-square fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp"
+                    class="fa fa-google-plus-square fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="https://www.instagram.com/siddharthwolverine"><i id="social-in"
+                    class="fa fa-instagram fa-3x social"></i></a>
+            &nbsp;&nbsp;
+            <a href="mailto:siddharthwolverine@gmail.com"><i id="social-em"
+                    class="fa fa-envelope-square fa-3x social"></i></a>
+            <br>
+
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: siddharthwolverine@gmail.com | All Rights
+            Reserved.
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
